@@ -7,9 +7,10 @@
 //  The FishLamp Framework is released under the MIT License: http://fishlamp.com/license 
 //
 
-#import <FishLampCore/FishLampCore.h>
+#import "FLCocoaRequired.h"
+#import "FishLampMinimum.h"
 
-@class FLLinkedList;
+#import "FLLinkedList.h"
 
 @interface FLInMemoryDataCache : NSObject {
 @private

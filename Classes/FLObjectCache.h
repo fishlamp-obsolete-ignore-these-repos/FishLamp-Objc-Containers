@@ -7,7 +7,7 @@
 //  The FishLamp Framework is released under the MIT License: http://fishlamp.com/license 
 //
 
-#import <FishLampCore/FishLampCore.h>
+#import "FLCocoaRequired.h"
 
 @interface FLObjectCache : NSObject {
 @private    

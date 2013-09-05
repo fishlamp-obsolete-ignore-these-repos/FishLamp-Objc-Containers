@@ -8,15 +8,13 @@
 //
 
 #import "FLInMemoryDataCache.h"
-#import "FLLinkedList.h"
-#import "FLLinkedListObjectContainer.h"
-
 #if REFACTOR
-    #if IOS
-    #import "FLLowMemoryHandler.h"
-    #endif
-    #import "FLCacheManager.h"
+#if IOS
+#import "FLLowMemoryHandler.h"
 #endif
+#import "FLCacheManager.h"
+#endif
+#import "FLLinkedListObjectContainer.h"
 
 //#define TRACE 0
 
@@ -129,12 +127,12 @@
 		}
 
 #if TRACE		
-		FLDebugLog(@"Updated %@:%@", key, object);
+		FLLog(@"Updated %@:%@", key, object);
 #endif
 
 		
 #if OUTPUT_ON_CHANGE
-		FLDebugLog([_list description]);
+		FLLog([_list description]);
 #endif		
 	}
 }
@@ -147,7 +145,7 @@
 		if(node)
 		{
 #if TRACE		
-			FLDebugLog(@"Cache Hit %@:%@", node.key, node.object);
+			FLLog(@"Cache Hit %@:%@", node.key, node.object);
 #endif		  
 
 			[_list moveObjectToHead:node];
@@ -156,7 +154,7 @@
 #if TRACE
 		else
 		{
-			FLDebugLog(@"Cache miss %@", key);
+			FLLog(@"Cache miss %@", key);
 		}
 #endif		  
 	}
@@ -182,7 +180,7 @@
 		if(node)
 		{
 #if TRACE		
-			FLDebugLog(@"Removed %@:%@", node.key, node.object);
+			FLLog(@"Removed %@:%@", node.key, node.object);
 #endif
 
 			[_objects removeObjectForKey:forKey];

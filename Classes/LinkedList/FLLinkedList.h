@@ -7,7 +7,8 @@
 //  The FishLamp Framework is released under the MIT License: http://fishlamp.com/license 
 //
 
-#import <FishLampCore/FishLampCore.h>
+#import "FishLampMinimum.h"
+
 #import "FLLinkedListElement.h"
 
 @class FLLinkedListMutableEnumerator;
